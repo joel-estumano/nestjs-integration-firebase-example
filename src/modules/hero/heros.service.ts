@@ -11,7 +11,7 @@ export class HerosService {
 
   constructor(@Inject('FIREBASE_APP') private firebaseApp: app.App) {
     this.db = firebaseApp.firestore();
-    this.collection = this.db.collection('contacts');
+    this.collection = this.db.collection('heros');
   }
 
   async create(dto: HeroCreateDto): Promise<any> {
